@@ -39,6 +39,10 @@ public class SecurityConfig {
                                 .requestMatchers("/user/login").permitAll()
                                 .requestMatchers("/user/register").permitAll()
                                 .requestMatchers("user/validate").permitAll()
+                                .requestMatchers(
+                                        "/api/routes/options",
+                                        "/api/support/**"
+                                ).permitAll()
                                 .requestMatchers("/reservation/**").hasAnyAuthority("ROLE_USER")
                                 .requestMatchers("/airplane/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
                                 .anyRequest().authenticated()
