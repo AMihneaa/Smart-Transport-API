@@ -9,8 +9,6 @@ public class CallappApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CallappApplication.class, args);
-
-
 	}
 
 }
